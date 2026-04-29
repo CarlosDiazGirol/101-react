@@ -1,16 +1,20 @@
 import LayoutDefault from '../template/LayoutDefault'
-import Form from './components/Form'
+import { Routes, Route } from 'react-router-dom'
 import './App.css'
-import Button from './components/Button'
+import AddPokemon from './pages/AddPokemon'
+import Rick from './pages/Rick'
+import NotFound from './pages//NotFound'
 
 function App() {
   return (
     <LayoutDefault>
       <main>
-        <Form />
+        <Routes>
+          <Route path='/' element={<AddPokemon />} />
+          <Route path='/rick' element={<Rick />} />
+          <Route path='*' element={<NotFound />} />
+        </Routes>
       </main>
-    <Button color="red" text="aceptar"/>
-    <Button color="blue" text="cancelar"/>
     </LayoutDefault>
   )
 }

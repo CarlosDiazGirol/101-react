@@ -1,7 +1,26 @@
-.red {
-  background-color: red;
-} 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: aliceblue;
+  margin-bottom: 20px;
+}
 
-.blue {
-  background-color: blue;
+header nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.containerrick {
+  padding: 20px;
+  
 }

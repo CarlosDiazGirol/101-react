@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Card from './Card'
 
 function Form () {
   const [pokemonName, setPokemonName] = useState("")
@@ -11,8 +12,8 @@ function Form () {
     setPokemonName("")
     setPokemonImg("")
   }
+
   
-  const urlImg = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"
 
   const handleDelete = (indexRemove) => {
     setPokemon(prev => {
@@ -41,16 +42,10 @@ function Form () {
     <button type='submit'>Añadir</button>
   </form>
   <ul>
-          {pokemon.map((poke, id) => {
-            return (
-              <li key={id}>
-                <h2>{poke.pokemonName}</h2>
-                <img src={`${urlImg}${poke.pokemonImg}.png`} alt={poke.pokemonName}/>
-                <button onClick={() => handleDelete(id)} type='button'>Eliminar</button>
-              </li>
-            )
-          })}
-        </ul>
+    {pokemon.map((poke, id) => {
+      return ( <Card key={id} poke={poke} id={id} onDelete={handleDelete}/>)
+    })}
+  </ul>
   </>
   )
 }
