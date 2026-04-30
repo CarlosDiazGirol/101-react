@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
+import { Link } from "react-router-dom"
 function Rick () {
 
   const [url, setUrl] = useState("https://rickandmortyapi.com/api/character")
@@ -43,10 +44,12 @@ function Rick () {
       <ul className="cards">
       {characters.map((character) => {
         return (
-          <li key={character.id}> 
-            <p>{character.name}</p>
-            <img src={character.image} alt={character.name} />
-          </li>
+          <Link to={`/rick/${encodeURIComponent(character.name)}`} key={character.id}>
+            <li> 
+              <p>{character.name}</p>
+              <img src={character.image} alt={character.name} />
+            </li>
+          </Link>
         )
       })}
       </ul>

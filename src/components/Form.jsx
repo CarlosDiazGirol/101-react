@@ -6,14 +6,14 @@ function Form () {
   const [pokemonImg, setPokemonImg] = useState("")
   const [pokemon, setPokemon] = useState([])
 
+
+
   const handleSubmit = (e) => {
     e.preventDefault()
     setPokemon(prev => [...prev, {pokemonName, pokemonImg}])
     setPokemonName("")
     setPokemonImg("")
   }
-
-  
 
   const handleDelete = (indexRemove) => {
     setPokemon(prev => {
@@ -45,6 +45,7 @@ function Form () {
     {pokemon.map((poke, id) => {
       return ( <Card key={id} poke={poke} id={id} onDelete={handleDelete}/>)
     })}
+
   </ul>
   </>
   )
