@@ -1,0 +1,21 @@
+.button {
+  border: none;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.danger {
+  background-color: red;
+}
+
+.accept {
+  background-color: var(--accent);
+
+}
+
+.ghost {
+  background-color: grey;
+  color: black;
+}

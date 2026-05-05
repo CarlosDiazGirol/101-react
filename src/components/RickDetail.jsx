@@ -25,7 +25,7 @@ function RickDetail () {
       }
     }
     getCharacter()
-  }, [name])
+  }, [urlRick])
   return (
     <>
     {!character &&

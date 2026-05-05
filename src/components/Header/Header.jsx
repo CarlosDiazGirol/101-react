@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom' 
+import { Link } from 'react-router-dom'
+import styles from './Header.module.css'
 
 function Header () {
   return (
-    <header>
+    <header className={styles.header_page}>
         <div className='logo'>
           <h2>LOGO</h2>
         </div>

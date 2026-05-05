@@ -1,5 +1,9 @@
 import { useState } from 'react'
-import Card from './Card'
+import Card from '../Card'
+import Button from '../Button/Button'
+import styles from './Form.module.css'
+
+
 
 function Form () {
   const [pokemonName, setPokemonName] = useState("")
@@ -39,13 +43,12 @@ function Form () {
       onChange={(e) => setPokemonImg(e.target.value)}
       required 
     />
-    <button type='submit'>Añadir</button>
+    <Button type='submit' label='Añadir' variant="accept"/>
   </form>
-  <ul>
+  <ul className={styles.list}>
     {pokemon.map((poke, id) => {
       return ( <Card key={id} poke={poke} id={id} onDelete={handleDelete}/>)
     })}
-
   </ul>
   </>
   )

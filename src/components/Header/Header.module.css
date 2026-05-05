@@ -1,0 +1,28 @@
+.header_page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: aliceblue;
+  margin-bottom: 20px;
+  & nav {
+    & ul {
+      display: flex;
+      gap: 20px;
+      & li a {
+        color: red;
+        &:hover {
+          color: green;
+        }
+      }
+    }
+  }
+}
+
+
+/* BEM */
+/* BLOQUE 
+ELEMENTO
+MODIFICADOR
+
+header__logo--warning */
