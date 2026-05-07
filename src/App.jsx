@@ -5,21 +5,28 @@ import Rick from './pages/Rick'
 import RickDetail from './components/RickDetail'
 import NotFound from './pages//NotFound'
 import Formulario from './Formulario'
+import useTheme from './context/useTheme'
+import Search from './pages/SearchBoth'
 import './App.css'
 
 function App() {
+  const { isDark } = useTheme()
   return (
+    <>
+    
     <LayoutDefault>
-      <main>
+      <main className={isDark ? "appDark" : "appLight" }>
         <Routes>
           <Route path='/' element={<AddPokemon />} />
           <Route path='/rick' element={<Rick />} />
           <Route path='/rick/:name' element={<RickDetail />} />
           <Route path='/formulario' element={<Formulario />} />
+          <Route path='/search' element={<Search />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </main>
     </LayoutDefault>
+    </>
   )
 }
 

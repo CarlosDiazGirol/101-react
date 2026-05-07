@@ -37,6 +37,15 @@ main {
 }
 
 
+.appLight, .appDark {
+  transition: all 2s ease;
+}
+
+.appDark {
+  background-color: black;
+  color: white;
+}
+
 @keyframes spin {
   0% {rotate: 0deg}
   100% {rotate: 360deg;}

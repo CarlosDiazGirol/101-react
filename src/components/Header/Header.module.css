@@ -19,6 +19,44 @@
   }
 }
 
+.containerHeader {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.contentToggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 70px;
+  height: 35px;
+  background-color: grey;
+  border-radius: 20px;
+}
+
+.buttonisDark {
+  position: absolute;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+
+.dark, .light {
+  transition: all .5s ease;
+  cursor: pointer;
+}
+
+.dark {
+  left: 40px;
+}
+
+.light {
+  left: 0;
+}
+
+
 
 /* BEM */
 /* BLOQUE 
